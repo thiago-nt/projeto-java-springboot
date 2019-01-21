@@ -1,0 +1,10 @@
+body {
+    background-color: lightblue;
+}
+
+.labelInput {
+	padding-bottom: 6px;
+	font-size: 14px !important;
+	font-weight: 600 !important;
+	font-family: "Avenir Next forINTUIT", -apple-system, sans-serif;
+}
