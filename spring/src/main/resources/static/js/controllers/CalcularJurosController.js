@@ -34,4 +34,10 @@ function CalcularJurosController($scope, $http, $rootScope,
 		}, function(error) {
 		})
 	};
+	
+	$scope.initSession = function() {
+		$scope.valorSession = CalcularJurosServices.initSessionPayment({}, function(response) {
+		}, function(error) {
+		})
+	}
 }

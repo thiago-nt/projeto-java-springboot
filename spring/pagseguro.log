@@ -1,0 +1,60 @@
+24/01/2019 13:35:30 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: 333a804c-9260-4d07-86f3-1531a9a3de62
+24/01/2019 13:35:30 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=333a804c-9260-4d07-86f3-1531a9a3de62]
+24/01/2019 13:35:30 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 13:35:32 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 13:35:34 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 13:35:34 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 13:38:58 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: d8549a35-274d-435a-886c-de76c141482c
+24/01/2019 13:38:58 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=d8549a35-274d-435a-886c-de76c141482c]
+24/01/2019 13:38:58 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 13:39:00 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 13:39:01 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 13:39:01 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 13:45:12 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: 5151d21f-369b-48bd-87b5-46afa69ed7f4
+24/01/2019 13:45:12 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=5151d21f-369b-48bd-87b5-46afa69ed7f4]
+24/01/2019 13:45:12 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 13:45:12 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 13:45:12 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 13:45:12 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 13:46:38 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: cb6c5b38-fbb1-43b4-8044-97a4fc40407b
+24/01/2019 13:46:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=cb6c5b38-fbb1-43b4-8044-97a4fc40407b]
+24/01/2019 13:46:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 13:46:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 13:46:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 13:46:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 13:55:03 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: b9ccf59d-d10d-4c30-8e16-84da08f7c862
+24/01/2019 13:55:03 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=b9ccf59d-d10d-4c30-8e16-84da08f7c862]
+24/01/2019 13:55:03 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 13:55:03 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 13:55:04 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 13:55:04 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 14:00:55 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: f39f643e-9221-4a14-ade0-284beccd5cf9
+24/01/2019 14:00:55 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=f39f643e-9221-4a14-ade0-284beccd5cf9]
+24/01/2019 14:00:55 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 14:00:55 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 14:00:55 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 14:00:55 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 14:06:08 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: 366f2eb4-eace-4d79-9ca9-b27300f199b1
+24/01/2019 14:06:08 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=366f2eb4-eace-4d79-9ca9-b27300f199b1]
+24/01/2019 14:06:08 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 14:06:08 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 14:06:08 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 14:06:08 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 14:32:38 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: e1729c1a-08e6-488e-bfa8-7aace107beea
+24/01/2019 14:32:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=e1729c1a-08e6-488e-bfa8-7aace107beea]
+24/01/2019 14:32:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 14:32:38 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 14:32:39 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 14:32:39 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 14:37:29 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: aca0c1b8-9495-49b5-a0f8-393bd1a784a7
+24/01/2019 14:37:29 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=aca0c1b8-9495-49b5-a0f8-393bd1a784a7]
+24/01/2019 14:37:29 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 14:37:29 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 14:37:29 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 14:37:29 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao
+24/01/2019 14:47:20 PagSeguro.br.com.uol.pagseguro.api.http.AuthenticatedHttpClient[INFO]: Correlation Id: 5056c984-d3d1-4568-8ff2-ff784192e373
+24/01/2019 14:47:20 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Executando [POST] em [https://ws.sandbox.pagseguro.uol.com.br/v2/sessions?email=thiagonascimentotav@gmail.com&token=36325EDC1D6E421988CE68043864166F&correlationId=5056c984-d3d1-4568-8ff2-ff784192e373]
+24/01/2019 14:47:20 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Abrindo conexao
+24/01/2019 14:47:20 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Escrevendo body
+24/01/2019 14:47:21 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Lendo resposta
+24/01/2019 14:47:21 PagSeguro.br.com.uol.pagseguro.api.http.JSEHttpClient[INFO]: Fechando conexao

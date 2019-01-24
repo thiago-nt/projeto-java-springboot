@@ -8,4 +8,9 @@ public class WelcomeController {
 	public String loginMessage(){
 		return "index";
 	}
+	
+	@RequestMapping("/pagamentos")
+	public String loginPagamentos(){
+		return "pagamentos";
+	}
 }
