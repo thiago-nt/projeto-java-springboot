@@ -10,7 +10,7 @@ modulo.factory('PagamentosServices', [ '$resource', function($resource) {
 		  },
 		  transactionsPaymentCreditCard :{
 			     isArray: false,
-				 method: 'POST',
+				 method: 'GET',
 			     params: {action: 'transactionsPaymentCreditCard'}
 		  }
 	});

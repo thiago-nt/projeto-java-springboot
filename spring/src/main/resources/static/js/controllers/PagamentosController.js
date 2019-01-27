@@ -3,95 +3,95 @@ function PagamentosController($scope, $http, $rootScope,
 	$scope.valorSession = {};
 	$scope.bandeira = "";
 	$scope.hashCreditCard = "";
+	$scope.hashComprador = "";
 	
 	$scope.initSession = function() {
+		console.log('initSessionPayment');
 		PagamentosServices.initSessionPayment({
 			email: 'teste@teste.com'
 		}, function(response) {
+			console.log('initSessionPayment: '+response.idSession);
 			PagSeguroDirectPayment.setSessionId(response.idSession);
 		}, function(error) {
 			alert(error);
 		})
 	};
 	
-	$scope.finalizarPagamento = function() {
+	$scope.gerarTokenComprador = function() {
+		console.log('gerarTokenComprador');
 		PagSeguroDirectPayment.onSenderHashReady(function(response){
 		    if(response.status == 'error') {
 		        console.log(response.message);
 		        return false;
 		    }
-		    var hash = response.senderHash; //Hash estará disponível nesta variável.
+		    console.log('onSenderHashReady - hash:' +response.senderHash);
+		    $scope.hashComprador = response.senderHash; //Hash estará disponível nesta variável.
 		});
 	}
 	
-	$scope.valorPagamento = function() {
+	$scope.formasDePagamento = function() {
+		console.log('getPaymentMethods - Meio de pagamentos disponiveis');
 		PagSeguroDirectPayment.getPaymentMethods({
-			amount: 500.00,
+			amount: 25.00,
 			success: function(response) {
-				alert(response);
+				console.log('getPaymentMethods:'+response.paymentMethods);
 				//meios de pagamento disponíveis
 			},
 			error: function(response) {
-				alert(response);
+				console.log('getPaymentMethods: Error: '+response);
 				//tratamento do erro
 			},
 			complete: function(response) {
-				alert(response);
 				//tratamento comum para todas chamadas
 			}
 		});
 	}
 	
-	$scope.obterBandeiraCartao = function() {
+	$scope.obterBandeiraCartao = function(cartao) {
+		console.log('obterBandeiraCartao');
 		PagSeguroDirectPayment.getBrand({
 				cardBin:'411111',
 			success: function(response) {
-				alert(response);
+				console.log('Bandeira: ' +response.brand.name);
 				$scope.bandeira = response.brand.name;
-				//meios de pagamento disponíveis
-				$scope.obterTokenCartaoCredito(response);
 			},
 			error: function(response) {
-				alert(response);
-				//tratamento do erro
+				console.log('obterBandeiraCartao - Error: '+response);
 			},
 			complete: function(response) {
-				alert(response);
-				//tratamento comum para todas chamadas
 			}
 		});
 	}
 	
-	$scope.obterTokenCartaoCredito = function(brandJson) {
+	$scope.obterTokenCartaoCredito = function() {
+		console.log('obterTokenCartaoCredito');
 		PagSeguroDirectPayment.createCardToken({
 				cardNumber: '4111111111111111',
-				brand: brandJson.brand.name,
+				brand: $scope.bandeira,
 				cvv: '123',
 				expirationMonth: '12',
 				expirationYear: '2030',
 			success: function(response) {
-				alert(response);
-				$scope.hashCreditCard = response;
+				$scope.hashCreditCard = response["card"].token;
+				console.log('Token: '+$scope.hashCreditCard);
 				//meios de pagamento disponíveis
 			},
 			error: function(response) {
-				alert(response);
-				//tratamento do erro
+				console.log('obterTokenCartaoCredito- Erro: '+response);
 			},
 			complete: function(response) {
-				alert(response);
-				//tratamento comum para todas chamadas
 			}
 		});
 	}
 	
 	$scope.opcoesParcelamentoDisponivel = function() {
+		console.log('opcoesParcelamentoDisponivel');
 		PagSeguroDirectPayment.getInstallments({	
-				amount: 500.00,
+				amount: 25.00,
 				brand: $scope.bandeira,
-				maxInstallmentNoInterest: 2,
+				maxInstallmentNoInterest: 1,
 			success: function(response) {
-			//opções de parcelamento disponível
+				console.log('opcoesParcelamentoDisponivel: ' +response.installments);
 			},
 			error: function(response) {
 				//tratamento do erro
@@ -103,90 +103,24 @@ function PagamentosController($scope, $http, $rootScope,
 	}
 	
 	$scope.transactionsPaymentCreditCard = function() {
-		let xml = '<payment>'+
-			    '<mode>default</mode>' +
-			    '<method>creditCard</method>' +
-			    '<sender>' +
-			        '<name>Fulano Silva</name>' +
-			        '<email>fulano.silva@uol.com.br</email>' +
-			        '<phone>' +
-			            '<areaCode>11</areaCode>' +
-			            '<number>30380000</number>' +
-			        '</phone>' +
-			        '<documents>' +
-			            '<document>' +
-			                '<type>CPF</type>' +
-			                '<value>11475714734</value>' +
-			            '</document>' +
-			        '</documents>' +
-			        '<hash>abc1234</hash>' +
-			    '</sender>' +
-			    '<currency>BRL</currency>' +
-			    '<notificationURL>' +
-			    '<items>' +
-			        '<item>' +
-			            '<id>1</id>' +
-			            '<description>Descricao do item a ser vendido</description>' +
-			            '<quantity>2</quantity>' +
-			            '<amount>1.00</amount>' +
-			        '</item>' +
-			    '</items>' +
-			'<extraAmount>0.00</extraAmount>' +
-			    '<reference>R123456</reference>' +
-			    '<shipping>' +
-			        '<address>' +
-			            '<street>Av. Brigadeiro Faria Lima</street>' +
-			            '<number>1384</number>' +
-			            '<complement>1 andar</complement>' +
-			            '<district>Jardim Paulistano</district>' +
-			            '<city>Sao Paulo</city>' +
-			            '<state>SP</state>' +
-			            '<country>BRA</country>' +
-			            '<postalCode>01452002</postalCode>' +
-			        '</address>' +
-			        '<type>3</type>' +
-			        '<cost>0.00</cost>' +
-			    '</shipping>' +
-			    '<creditCard>' +
-			        '<token>'+$scope.hashCreditCard+'</token>' +
-			       '<installment>' +
-			            '<quantity>2</quantity>' +
-			            '<value>5.50</value>' +
-			        '</installment>' +
-			        '<holder>' +
-			            '<name>Nome impresso no cartao</name>' +
-			            '<documents>' +
-			                '<document>' +
-			                    '<type>CPF</type>' +
-			                    '<value>00722333665</value>' +
-			                '</document>' +
-			            '</documents>' +
-			            '<birthDate>20/10/1980</birthDate>' +
-			            '<phone>' +
-			                '<areaCode>11</areaCode>' +
-			                '<number>999991111</number>' +
-			            '</phone>' +
-			        '</holder>' +
-			        '<billingAddress>' +
-			            '<street>Av. Brigadeiro Faria Lima</street>' +
-			            '<number>1384</number>' +
-			            '<complement>1 andar</complement>' +
-			            '<district>Jardim Paulistano</district>' +
-			            '<city>Sao Paulo</city>' +
-			            '<state>SP</state>' +
-			            '<country>BRA</country>' +
-			            '<postalCode>01452002</postalCode>' +
-			        '</billingAddress>' +
-			    '</creditCard>' +
-			'</payment>';
+		console.log('transactionsPaymentCreditCard');
 		PagamentosServices.transactionsPaymentCreditCard({
-			xmlCreditCard : xml,
+			token : $scope.hashCreditCard,
+			hash : $scope.hashComprador
 		}, function(response) {
 			let resp = response;
 		}, function(error) {
 			alert(error);
 		})
 	};
+	
+	$scope.validacaoDataValidade = function(validade) {
+		if(validade.length > 0) {
+			validade = validade.replace(/\D/g, "");
+			let dataValidadeFormat = validade.match(/\d{1,2}/g).join('/')
+			$scope.cadastro.inputDataValidade = dataValidadeFormat;
+		}
+	}
 	
 //	$scope.initSession();
 }
