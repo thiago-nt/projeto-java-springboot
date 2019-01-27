@@ -5,18 +5,18 @@ Spring Data
 AngularJs
 BootStrap
 H2
-
-#InstalaÁ„o
-1- ApÛs descompactar o projeto e importar como projeto maven no eclipse, Compilar a classe Application.java com o seguinte comando:  
+TESTE
+#Instala√ß√£o
+1- Ap√≥s descompactar o projeto e importar como projeto maven no eclipse, Compilar a classe Application.java com o seguinte comando:  
 mvn spring-boot:run  
-ou apÛs abrir a classe Application.java selecionar opÁ„o RunAs - Java Application.
+ou ap√≥s abrir a classe Application.java selecionar op√ß√£o RunAs - Java Application.
 
-2 - ApÛs o Build do projeto ser finalizado ser· adicionado a base de Dados 1 registro como exemplo. 
+2 - Ap√≥s o Build do projeto ser finalizado ser√° adicionado a base de Dados 1 registro como exemplo. 
 ### insert into CALCULAR_JUROS values(0, 70, 'Thiago Nascimento', 'B', 7);
 
-3- ApÛs o Build do projeto, utilize o link abaixo no browser para utilizar a tela de cadastro:
+3- Ap√≥s o Build do projeto, utilize o link abaixo no browser para utilizar a tela de cadastro:
 ### http://localhost:8080/index
 
-4- Na tela ter· os botıes Consultar onde j· consta um registro cadastrado e o bot„o Salvar para inserir novos registros.
+4- Na tela ter√° os bot√µes Consultar onde j√° consta um registro cadastrado e o bot√£o Salvar para inserir novos registros.
 
 
